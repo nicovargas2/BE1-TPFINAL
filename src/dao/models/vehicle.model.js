@@ -12,8 +12,9 @@ const schema = new mongoose.Schema({
     licensePlate: { type: String, required: true, unique: true },
     driverId: { type: mongoose.Schema.Types.ObjectId, ref: config.USERS_COLLECTION, required: true },
     lastMaintenance: { type: Date },
-    capacity: { type: Number, required: true }
+    capacity: { type: Number, required: true } //en kilos
 });
+
 schema.plugin(mongoosePaginate);
 
 const model = mongoose.model(collection, schema);

@@ -36,6 +36,8 @@ class ShipmentController {
         }
     }
 
+    // No existe un delete porque los envios no se borran, 
+    // si se cancela a lo sumo se hace un update y un status 'canceled'.
 }
 
 export default ShipmentController;

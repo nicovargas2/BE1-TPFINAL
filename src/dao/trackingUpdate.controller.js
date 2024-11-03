@@ -36,6 +36,8 @@ class TrackingUpdateController {
         }
     }
 
+    // No existe un delete porque no quiero que se pueda 
+    // borrar los comentarios en los tracking updates.
 }
 
 export default TrackingUpdateController;
