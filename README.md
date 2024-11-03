@@ -27,7 +27,7 @@ Se usa router para gestionar las diferentes vistas, como la página principal, l
 Se usa Handlebars para mostrar el listado de envíos, los detalles del paquete y su estado actual.
 
 
-##Ejemplo de flujo:
+Ejemplo de flujo:
 
 Un administrador crea un nuevo envío en la plataforma, asigna un transportista, y envía la notificación al cliente.
 
@@ -36,7 +36,7 @@ El transportista actualiza el estado del envío conforme progresa (recolección,
 El cliente y el administrador reciben actualizaciones en tiempo real sobre el estado del envío.
 
 
-##Puntos a destacar
+Puntos a destacar
 
 Interactividad en tiempo real: El uso de WebSockets para la actualización en tiempo real del estado de los envíos. (a futuro: la geolocalización le daría un toque moderno y funcional).
 
@@ -45,7 +45,7 @@ Relevancia práctica: La logística es un área clave para muchas empresas, y el
 Amplitud: Este proyecto cubre un rango de temas desde el manejo de roles, hasta la persistencia de datos, y la interactividad en tiempo real.
 
 
-##Posibles mejoras (Para siguientes etapas en la carrera):
+Posibles mejoras (Para siguientes etapas en la carrera):
 
 -Geolocalización y tracking: Se podría integrar una funcionalidad de geolocalización para que los transportistas puedan actualizar su ubicación en tiempo real (usando la API de geolocalización del navegador).
 
