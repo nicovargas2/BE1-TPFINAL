@@ -26,18 +26,31 @@ Router y Handlebars:
 Se usa router para gestionar las diferentes vistas, como la página principal, la gestión de envíos, y los detalles de un envío.
 Se usa Handlebars para mostrar el listado de envíos, los detalles del paquete y su estado actual.
 
-Ejemplo de flujo:
+
+##Ejemplo de flujo:
+
 Un administrador crea un nuevo envío en la plataforma, asigna un transportista, y envía la notificación al cliente.
+
 El transportista actualiza el estado del envío conforme progresa (recolección, en tránsito, entregado) y su ubicación en tiempo real usando WebSockets.
+
 El cliente y el administrador reciben actualizaciones en tiempo real sobre el estado del envío.
 
-Puntos a destacar
+
+##Puntos a destacar
+
 Interactividad en tiempo real: El uso de WebSockets para la actualización en tiempo real del estado de los envíos. (a futuro: la geolocalización le daría un toque moderno y funcional).
+
 Relevancia práctica: La logística es un área clave para muchas empresas, y el proyecto muestra cómo resolver problemas logísticos que cualquier pequeña empresa con envíos necesita cubrir.
+
 Amplitud: Este proyecto cubre un rango de temas desde el manejo de roles, hasta la persistencia de datos, y la interactividad en tiempo real.
 
-Posibles mejoras (Para siguientes etapas en la carrera):
+
+##Posibles mejoras (Para siguientes etapas en la carrera):
+
 -Geolocalización y tracking: Se podría integrar una funcionalidad de geolocalización para que los transportistas puedan actualizar su ubicación en tiempo real (usando la API de geolocalización del navegador).
+
 -Mostrar un mapa interactivo donde los usuarios puedan seguir en tiempo real la ubicación de sus paquetes mientras son transportados.
+
 -Estadísticas de rendimiento: Agrega un dashboard para que los administradores puedan ver métricas como el tiempo promedio de entrega o los envíos completados por día.
+
 -Integración con sistemas de transporte: Podría integrarlo con servicios de transporte externo (como APIs de mensajería) para obtener datos reales de tracking de otros proveedores.
