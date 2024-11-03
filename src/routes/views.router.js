@@ -1,0 +1,21 @@
+import { Router } from 'express';
+import UserController from '../dao/user.controller.js';
+
+
+const router = Router();
+const controller = new UserController();
+
+router.get('/users/:pg?', async (req, res) => {
+    const pg = req.params.pg;
+    const data = await controller.getPaginated(pg);
+
+    res.status(200).render('users', { users: data });
+});
+
+router.get('/', async (req, res) => {
+    console.log("pasa por el views/users get comun no paginado")
+    const data = await controller.get();
+    res.status(200).render('users', { users: data });
+});
+
+export default router;

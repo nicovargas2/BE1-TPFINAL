@@ -1,0 +1,49 @@
+<div class="container">
+    <h1 class="text-center my-4 text-primary">Logistics Master</h1>
+    <h2 class="text-center mb-4">Users</h2>
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Page {{users.page}} of {{users.totalPages}}</span>
+        <div>
+            {{#if (gt users.page 1)}}
+            <a href="/views/users/1" class="btn btn-outline-secondary btn-sm">First</a>
+            {{/if}}
+            {{#if users.hasPrevPage}}
+            <a href="/views/users/{{users.prevPage}}" class="btn btn-outline-secondary btn-sm">Previous</a>
+            {{/if}}
+            {{#if users.hasNextPage}}
+            <a href="/views/users/{{users.nextPage}}" class="btn btn-outline-secondary btn-sm">Next</a>
+            {{/if}}
+            {{#if (lt users.page users.totalPages)}}
+            <a href="/views/users/{{users.totalPages}}" class="btn btn-outline-secondary btn-sm">Last</a>
+            {{/if}}
+        </div>
+    </div>
+
+    <table class="table table-striped table-hover">
+        <thead class="table-primary">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Role</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each users.docs}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.role}}</td>
+                <td>{{this.phone}}</td>
+                <td>{{this.address}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <div class="d-flex justify-content-center mt-4">
+        <a href="/" class="btn btn-outline-primary">Back to Home</a>
+    </div>
+</div>
