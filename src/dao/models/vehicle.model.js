@@ -11,7 +11,7 @@ const schema = new mongoose.Schema({
     type: { type: String, required: true },
     licensePlate: { type: String, required: true, unique: true },
     driverId: { type: mongoose.Schema.Types.ObjectId, ref: config.USERS_COLLECTION, required: true },
-    lastMaintenance: { type: Date },
+    lastMaintenance: { type: Date, default: Date.now },
     capacity: { type: Number, required: true } //en kilos
 });
 

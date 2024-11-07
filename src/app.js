@@ -3,6 +3,7 @@ import handlebars from 'express-handlebars';
 import initSocket from './sockets.js';
 import mongoose from 'mongoose';
 import usersRouter from './routes/users.router.js';
+import vehiclesRouter from './routes/vehicles.router.js';
 import viewsRouter from './routes/views.router.js';
 import config from './config.js';
 import { create } from 'express-handlebars';
@@ -31,6 +32,7 @@ const httpServer = app.listen(config.PORT, async () => {
 
     app.use('/views', viewsRouter);
     app.use('/api/users', usersRouter);
+    app.use('/api/vehicles', vehiclesRouter);
     app.use('/static', express.static(`${config.DIRNAME}/public`));
 
     console.log(`Server activo en puerto ${config.PORT} conectado a bbdd`);
