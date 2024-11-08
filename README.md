@@ -15,11 +15,16 @@ Todo lo que se impacte trabaja directamente con Atlas y se ve reflejado en la nu
 
 
 # En desarrollo:
-Websockets con tracking status
-Nav bar
-Login
-Main
-Formularios
+
+> Websockets con tracking status
+
+> Nav bar
+
+> Login
+
+> Main
+
+> Formularios
 
 
 # Descripcion del proyecto
