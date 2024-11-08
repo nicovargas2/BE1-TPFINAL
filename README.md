@@ -2,6 +2,26 @@
 
 # Materia: Programación Backend I: Desarrollo Avanzado de Backend
 
+# Algunos puntos:
+Link de lo que funciona hasta ahora en render (view con paginated):
+https://be1-tpfinal.onrender.com/views/users/1
+
+Endpoints a los que se puede llegar con Postman:
+https://be1-tpfinal.onrender.com/api/users
+https://be1-tpfinal.onrender.com/api/vehicles
+https://be1-tpfinal.onrender.com/api/shipments
+
+Todo lo que se impacte trabaja directamente con Atlas y se ve reflejado en la nube.
+
+
+# En desarrollo:
+Websockets con tracking status
+Nav bar
+Login
+Main
+Formularios
+
+
 # Descripcion del proyecto
 Idea: Plataforma de Gestión de Envíos en Tiempo Real para Pequeñas Empresas
 Una aplicación para gestionar y rastrear envíos de productos (que en principio serán tratados como paquetes sin descripción de los productos que se transportan) para pequeñas empresas que necesitan tener visibilidad de su logística en tiempo real.
