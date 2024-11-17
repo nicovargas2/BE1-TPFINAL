@@ -9,7 +9,8 @@ const config = {
     SHIPMENTS_COLLECTION: 'shipments',
     VEHICLES_COLLECTION: 'vechiles',
     TRACKING_UPDATES_COLLECTION: 'trackingupdates',
-    ITEMS_PER_PAGE: 10
+    ITEMS_PER_PAGE: 10,
+    TRACKING_UPDATES_ITEMS_PER_PAGE: 2
 };
 
 export default config;
