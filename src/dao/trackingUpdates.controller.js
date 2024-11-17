@@ -14,7 +14,8 @@ class TrackingUpdateController {
 
     getPaginated = async (pg) => {
         try {
-            return await trackingUpdateModel.paginate({}, { limit: config.ITEMS_PER_PAGE, page: pg, lean: true });
+            //return await trackingUpdateModel.paginate({}, { limit: config.ITEMS_PER_PAGE, page: pg, lean: true });
+            return await trackingUpdateModel.paginate({}, { limit: config.TRACKING_UPDATES_ITEMS_PER_PAGE, page: pg, lean: true });
         } catch (err) {
             return err.message;
         }

@@ -18,4 +18,10 @@ router.get('/', async (req, res) => {
     res.status(200).render('users', { users: data });
 });
 
+/* continuar desarrollando esta
+router.post('/shipments', () => {
+    
+})
+*/
+
 export default router;
