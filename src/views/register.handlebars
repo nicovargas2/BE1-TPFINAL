@@ -1,0 +1,58 @@
+<style>
+    .register-container {
+        margin-top: 64px !important;
+        max-width: 360px;
+        margin: auto;
+        padding: 32px;
+        border-radius: 0.5em;
+        color: #fff;
+        border: 1px solid #666;
+    }
+
+    .a2 {
+        color: #666;
+    }
+
+    .a2:hover {
+        color: #fff;
+    }
+</style>
+
+<div class="register-container">
+    <h1 style="color: blue;"><b>Logistics Master</b></h1>
+    <h2 style="color: blue;"><b>Register</b></h2>
+
+    <form action="/api/users/register" method="post">
+        <div class="input-group" style="width: 300px; margin-bottom: 32px;">
+            <span class="input-group-text" id="group1"><i class="fa-solid fa-user"></i></span>
+            <input type="text" name="name" class="form-control" placeholder="Full name" required="required"
+                autofocus="autofocus">
+        </div>
+
+        <div class="input-group" style="width: 300px; margin-bottom: 32px;">
+            <span class="input-group-text" id="group1"><i class="fa-solid fa-envelope"></i></span>
+            <input type="email" name="email" class="form-control" placeholder="email" required="required">
+        </div>
+
+        <div class="input-group" style="width: 300px; margin-bottom: 32px;">
+            <span class="input-group-text" id="group2"><i class="fa-solid fa-lock"></i></span>
+            <input type="password" name="password" class="form-control" required="required">
+        </div>
+
+        <div class="input-group" style="width: 300px; margin-bottom: 32px;">
+            <span class="input-group-text" id="group2"><i class="fa-solid fa-user"></i></span>
+            <input type="text" name="address" class="form-control" placeholder="Address" required="required">
+        </div>
+
+        <div class="input-group" style="width: 300px; margin-bottom: 32px;">
+            <span class="input-group-text" id="group2"><i class="fa-solid fa-user"></i></span>
+            <input type="text" name="phone" class="form-control" placeholder="Primary phone number" required="required">
+        </div>
+
+        <button type="submit" class="btn btn-success">Register!</button>
+
+    </form>
+    <div style="margin-top: 24px; color: blue;">
+        <p> Already registered?: <a class="a2" href="/">login</a></p>
+    </div>
+</div>

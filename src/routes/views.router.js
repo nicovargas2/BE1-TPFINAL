@@ -6,16 +6,26 @@ const router = Router();
 const controller = new UserController();
 
 router.get('/users/:pg?', async (req, res) => {
-    console.log("pasa por el views/users get paginado")
     const pg = req.params.pg;
     const data = await controller.getPaginated(pg);
     res.status(200).render('users', { users: data });
 });
 
 router.get('/', async (req, res) => {
-    console.log("pasa por el views/ get comun no paginado, pero no funciona la vista")
     const data = await controller.get();
     res.status(200).render('users', { users: data });
+});
+
+router.get('/register', (req, res) => {
+    const data = {
+    };
+    res.status(200).render('register', data);
+});
+
+router.get('/loadShipment', (req, res) => {
+    const data = {
+    };
+    res.status(200).render('loadShipment', data);
 });
 
 /* continuar desarrollando esta

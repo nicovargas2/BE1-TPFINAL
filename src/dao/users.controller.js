@@ -12,6 +12,14 @@ class UserController {
         }
     }
 
+    find = async (email) => {
+        try {
+            return await userModel.find(email = email).lean();
+        } catch (err) {
+            return err.message;
+        }
+    }
+
     getPaginated = async (pg) => {
         try {
             return await userModel.paginate({}, { limit: config.ITEMS_PER_PAGE, page: pg, lean: true });

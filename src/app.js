@@ -32,6 +32,11 @@ const httpServer = app.listen(config.PORT, async () => {
     app.set('views', `${config.DIRNAME}/views`);
     app.set('view engine', 'handlebars');
 
+    app.get('/', (req, res) => {
+        console.log('Solicitud recibida en ruta raíz');
+        res.status(200).render('index', {});
+    });
+
     app.use('/views', viewsRouter);
 
     app.use('/api/users', usersRouter);
