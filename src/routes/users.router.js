@@ -17,6 +17,20 @@ router.get('/', async (req, res) => {
     res.status(200).send({ error: null, data: data });
 });
 
+router.get('/login', async (req, res) => {
+    const { email, password } = req.body;
+    console.log('email recibido:', email)
+    console.log('password recibido:', password)
+    const data = await controller.find(email);
+    console.log("data encontrado:", data)
+    if (data.email == email && data.password == password) {
+        res.status(200).render('index', { error: 'afirmativo', data: data.name });
+    }
+    else {
+        res.status(404).render('login', { error: 'email or password invalid', data: {} });
+    }
+});
+
 // para pasar por acá hay que pegarle a la URL: api/users/paginated/(un numero)
 router.get('/paginated/:pg?', async (req, res) => {
     const pg = req.params.pg || 1;
@@ -33,6 +47,23 @@ router.post('/', auth, async (req, res) => {
 
         if (process) {
             res.status(200).send({ error: null, data: process })
+        } else {
+            res.status(500).send({ error: 'User could not be added.', data: [] });
+        }
+    } else {
+        res.status(400).send({ error: 'Missing required data', data: [] });
+    }
+})
+
+router.post('/register', async (req, res) => {
+    const { name, email, password, phone, address } = req.body;
+
+    if (name != '' && email != '' && password != '' && phone != '' && address != '') {
+        const newUser = { name, email, password, phone, address };
+        const process = await controller.add(newUser);
+
+        if (process) {
+            res.status(200).render('login', { error: null, data: process });
         } else {
             res.status(500).send({ error: 'User could not be added.', data: [] });
         }
